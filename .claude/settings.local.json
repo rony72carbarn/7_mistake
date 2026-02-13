@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(xargs:*)",
+      "Bash(du:*)",
+      "Bash(find:*)",
+      "Bash(node scripts/generate-audio.js:*)",
+      "Bash(node scripts/check-duration-mediabunny.js:*)",
+      "Bash(node -e:*)",
+      "Bash(ffprobe:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx remotion:*)",
+      "Bash(npm run build:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(if exist node_modules.cache rmdir /s /q node_modules.cache)",
+      "Bash(if exist .remotion rmdir /s /q .remotion)",
+      "Bash(powershell:*)",
+      "Bash(start npm run dev)",
+      "Bash(timeout:*)",
+      "Bash(where:*)"
+    ]
+  }
+}

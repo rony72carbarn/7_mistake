@@ -1,0 +1,77 @@
+SCENE 4 VOICE-OVER SCRIPT
+For ElevenLabs Text-to-Speech Generation
+==========================================
+
+FULL SCRIPT (Copy and paste into ElevenLabs):
+----------------------------------------------
+For South Sudan, your documents matter as much as the car. You need the right originals ready for customs and registration. With Carbarn, you can track and download key documents through your dashboard, and you'll receive what you need, including your invoice and shipping paperwork — so nothing is "missing later".
+
+
+RECOMMENDED VOICE SETTINGS:
+---------------------------
+- Voice: Choose a professional, clear male or female voice
+- Stability: 0.5-0.6 (natural variation)
+- Clarity: 0.7-0.8 (clear pronunciation)
+- Style Exaggeration: 0.0-0.2 (professional tone)
+- Speaker Boost: ON (if available)
+
+
+SCRIPT WITH PAUSES (for reference):
+------------------------------------
+For South Sudan, [pause 0.3s]
+your documents matter as much as the car. [pause 0.5s]
+
+You need the right originals [pause 0.2s]
+ready for customs and registration. [pause 0.5s]
+
+With Carbarn, [pause 0.2s]
+you can track and download key documents [pause 0.2s]
+through your dashboard, [pause 0.5s]
+
+and you'll receive what you need, [pause 0.5s]
+including your invoice [pause 0.2s]
+and shipping paperwork [pause 0.5s]
+
+— so nothing is [pause 0.3s]
+"missing later". [end]
+
+
+EMPHASIS POINTS (ensure these words are clear):
+------------------------------------------------
+- "documents" (appears multiple times - key concept)
+- "originals" (important requirement)
+- "customs and registration" (official terminology)
+- "track and download" (key features)
+- "dashboard" (product feature)
+- "invoice and shipping paperwork" (specific examples)
+- "missing later" (key phrase - use quotes in delivery)
+
+
+SCENE-BY-SCENE BREAKDOWN:
+--------------------------
+Scene 1: "For South Sudan,"
+Scene 2: "your documents matter as much as the car."
+Scene 3: "You need the right originals ready for customs and registration."
+Scene 4: "With Carbarn, you can track and download key documents through your dashboard,"
+Scene 5: "and you'll receive what you need,"
+Scene 6: "including your invoice and shipping paperwork"
+Scene 7: "— so nothing is 'missing later'."
+
+
+AFTER GENERATION:
+-----------------
+1. Download the audio file
+2. Rename to: audio_scene4_south_sudan.mp3
+3. Save to: C:\Users\Carbarn\Desktop\CARBARN\AUTOMATIONS\7_mistake\public\
+4. Run: analyze_scene4_audio.bat
+5. Update timing in src/scene_4/constants.ts
+6. Test in Remotion Studio
+
+
+TARGET DURATION:
+----------------
+Aim for 30-35 seconds total
+(Current placeholder: 33.7 seconds / 1010 frames)
+
+If your audio is longer or shorter, that's fine!
+Just update the frame counts accordingly.

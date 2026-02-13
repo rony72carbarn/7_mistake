@@ -1,0 +1,47 @@
+{
+    "total_duration": 40.542,
+    "sentences": [
+        {
+            "sentence": "Cholakwika chachinayi: Kudumpha kuwunika zikalata—ndikukagwidwa potulutsa galimoto (clearing).",
+            "start_time": 0.0,
+            "end_time": 6.211,
+            "duration_seconds": 6.211
+        },
+        {
+            "sentence": "Ku Malawi, zikalata zanu ndizofunika chimodzimodzi ndi galimotoyo.",
+            "start_time": 6.211,
+            "end_time": 10.844,
+            "duration_seconds": 4.633
+        },
+        {
+            "sentence": "Mukufunika zikalata zenizeni (originals) zokonzeka ku Customs ndi kulembetsa—kuphatikizapo",
+            "start_time": 10.844,
+            "end_time": 17.241,
+            "duration_seconds": 6.397
+        },
+        {
+            "sentence": "invoice yanu, Bill of Lading, ndi mapepala ofunikira potulutsa galimoto.",
+            "start_time": 17.241,
+            "end_time": 23.638,
+            "duration_seconds": 6.397
+        },
+        {
+            "sentence": "Ndi Carbarn, mutha kutsata ndi kutsitsa zikalata zofunika kudzera pa Dashboard yanu, ndipo mudzalandira zomwe",
+            "start_time": 23.638,
+            "end_time": 32.003,
+            "duration_seconds": 8.365
+        },
+        {
+            "sentence": "mukufunikira, kuphatikizapo invoice ndi mapepala otumizira—choncho palibe chomwe chidzasowe \"pambuyo pake\".",
+            "start_time": 32.003,
+            "end_time": 40.368,
+            "duration_seconds": 8.365
+        },
+        {
+            "sentence": "",
+            "start_time": 40.368,
+            "end_time": 40.542,
+            "duration_seconds": 0.174
+        }
+    ]
+}

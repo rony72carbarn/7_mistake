@@ -1,0 +1,20 @@
+{
+    "description": "A futuristic cyberpunk laboratory bathed in the eerie luminescence of numerous glowing blue vials. A highly articulated robot arm with exposed wiring and metallic plating moves with precision amidst tangled cables, data screens showing complex readouts, and advanced scientific equipment. The environment is dark and metallic with neon accents, reflecting a sense of advanced technology and clandestine experimentation.",
+    "objects_found": [
+        "glowing blue vials",
+        "robot arm",
+        "cables",
+        "data screens",
+        "scientific equipment",
+        "neon lights",
+        "metal workbenches"
+    ],
+    "dominant_colors": [
+        "glowing blue",
+        "metallic gray",
+        "black",
+        "neon green",
+        "dark cyan"
+    ],
+    "mood": "futuristic, mysterious, scientific, high-tech, atmospheric"
+}
