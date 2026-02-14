@@ -5,6 +5,7 @@ import { staticFile } from "remotion";
 // ============================================================
 export const TECH_BLUE = "#0052FF";
 export const ACCENT_CYAN = "#00D4FF";
+export const WARNING_RED = "#FF3B30";
 export const SUCCESS_GREEN = "#00C853";
 export const GOLD = "#FFB800";
 export const TEXT_DARK = "#0A0A0B";

@@ -1,0 +1,80 @@
+[
+  {
+    "scene": 5,
+    "asset_id": "asset_00",
+    "filename": "asset_00.png",
+    "filepath": "scene_5_assets\\asset_00.png",
+    "contextual_rationale": "Here's the visual breakdown of your script, with each beat represented by a modern, flat-style infographic asset:\n\n This image represents the initial problem: \"Paperwork hassle.\" A document icon with a prominent \"X\" or warning sign clearly indicates an issue with paperwork.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 5,
+    "asset_id": "asset_01",
+    "filename": "asset_01.png",
+    "filepath": "scene_5_assets\\asset_01.png",
+    "contextual_rationale": "This image emphasizes the importance of documentation in Bangladesh. A series of document icons, including an export certificate and bill of lading, flow towards a checkmark, signifying completeness and correctness.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 5,
+    "asset_id": "asset_02",
+    "filename": "asset_02.png",
+    "filepath": "scene_5_assets\\asset_02.png",
+    "contextual_rationale": "This visual illustrates the consequence of missing documents: the car being stuck at customs. A car icon is shown halted at a customs gate, with a document icon having a red \"X\" next to it, and a frustrated person.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 5,
+    "asset_id": "asset_03",
+    "filename": "asset_03.png",
+    "filepath": "scene_5_assets\\asset_03.png",
+    "contextual_rationale": "This image introduces the solution: Carbarn's secure dashboard. A tablet or computer screen displays a clean interface with document icons and a prominent lock symbol, representing security and organization.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 5,
+    "asset_id": "asset_04",
+    "filename": "asset_04.png",
+    "filepath": "scene_5_assets\\asset_04.png",
+    "contextual_rationale": ": This visual depicts the ability to track and download original documents. Arrows show documents moving from a cloud icon to a download folder, emphasizing the digital accessibility.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 5,
+    "asset_id": "asset_05",
+    "filename": "asset_05.png",
+    "filepath": "scene_5_assets\\asset_05.png",
+    "contextual_rationale": "This image represents the \"clearance time\" and the smooth process with the C&F agent. A car drives smoothly on a road, with documents flying into a \"cleared\" box, and a handshake icon between two figures (representing the agent and the client) with a checkmark, indicating a hassle-free process.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  }
+]

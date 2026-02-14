@@ -36,7 +36,7 @@ export const S4_IMG_06 = staticFile("assets/global/scene_4_assets/asset_06.png")
 
 // LOTTIES
 export const LOT_ALERT = staticFile("assets/global/animated_icons/Alert.json");
-export const LOT_CHECK = staticFile("assets/global/animated_icons/Check.json");
+export const LOT_CHECK = staticFile("assets/global/animated_icons/premium_some_icons/Check.json");
 export const LOT_SEARCH = staticFile("assets/global/animated_icons/search.json");
 export const LOT_BADGE = staticFile("assets/global/animated_icons/Badge.json");
 export const LOT_MONEY = staticFile("assets/global/animated_icons/Trophy.json"); // Approximate for smart decision/success

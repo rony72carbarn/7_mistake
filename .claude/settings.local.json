@@ -21,7 +21,11 @@
       "Bash(powershell:*)",
       "Bash(start npm run dev)",
       "Bash(timeout:*)",
-      "Bash(where:*)"
+      "Bash(where:*)",
+      "Bash(grep:*)",
+      "Bash(python3:*)",
+      "Bash(npm ci:*)",
+      "Bash(npm install:*)"
     ]
   }
 }

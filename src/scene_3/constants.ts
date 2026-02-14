@@ -42,4 +42,4 @@ export const LOT_ALERT = staticFile("assets/global/animated_icons/Alert.json");
 export const LOT_GDPR = staticFile("assets/global/animated_icons/GDPR.json");
 export const LOT_SEARCH = staticFile("assets/global/animated_icons/Search.json");
 export const LOT_BADGE = staticFile("assets/global/animated_icons/Badge.json");
-export const LOT_CHECK = staticFile("assets/global/animated_icons/Check.json");
+export const LOT_CHECK = staticFile("assets/global/animated_icons/premium_some_icons/Check.json");

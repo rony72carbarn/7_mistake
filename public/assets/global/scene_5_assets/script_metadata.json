@@ -1,0 +1,48 @@
+{
+    "scene": 5,
+    "total_duration": 30.03,
+    "sentences": [
+        {
+            "sentence": "মিস্টেক নাম্বার ফোর: পেপারওয়ার্কের ঘাপলা— আর পোর্টে গাড়ি আটকানো!",
+            "start_time": 0.0,
+            "end_time": 4.239,
+            "duration_seconds": 4.239
+        },
+        {
+            "sentence": "\" \"বাংলাদেশে ভাই ডকুমেন্টেশন ইজ এভরিথিং।",
+            "start_time": 4.239,
+            "end_time": 4.239,
+            "duration_seconds": 0.0
+        },
+        {
+            "sentence": "এক্সপোর্ট সার্টিফিকেট, বিল অফ লেডিং— এগুলোর একটা মিসিং তো আপনার গাড়ি কাস্টমসে আটকে যাবে!",
+            "start_time": 4.239,
+            "end_time": 8.156,
+            "duration_seconds": 3.917
+        },
+        {
+            "sentence": "কারবার্নের সিকিউর ড্যাশবোর্ড থেকে আপনি আপনার সব অরিজিনাল ডকুমেন্ট ট্র্যাক আর ডাউনলোড করতে পারবেন।",
+            "start_time": 8.156,
+            "end_time": 11.992,
+            "duration_seconds": 3.836
+        },
+        {
+            "sentence": "ক্লিয়ারেন্সের সময় সিঅ্যান্ডএফ (C&F)",
+            "start_time": 11.992,
+            "end_time": 21.011000000000003,
+            "duration_seconds": 9.019
+        },
+        {
+            "sentence": "এজেন্টকে নিয়ে কোনো 'প্যারা' খেতে হবে না।",
+            "start_time": 21.011000000000003,
+            "end_time": 30.03,
+            "duration_seconds": 9.019
+        },
+        {
+            "sentence": "",
+            "start_time": 30.03,
+            "end_time": 30.03,
+            "duration_seconds": 0.0
+        }
+    ]
+}
