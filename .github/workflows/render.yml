@@ -5,10 +5,11 @@ on:
 
 jobs:
   render:
-    uses: uses: rony72carbarn/Remotion-Matrix-Renderer/.github/workflows/render-video-matrix.yml@master
+    uses: rony72carbarn/Remotion-Matrix-Renderer/.github/workflows/render-video-matrix.yml@master
     with:
       num_of_workers: 3
       remotion_composition_id: Scene4
       remotion_entry_point: src/index.js
+
 
 
