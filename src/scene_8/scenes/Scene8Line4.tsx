@@ -8,9 +8,9 @@ import {
     useVideoConfig,
 } from "remotion";
 import { Lottie } from "@remotion/lottie";
-import { Scene4Wrapper } from "../../scene_4/components/Scene4Wrapper";
-import { DocumentReveal } from "../../scene_4/components/DocumentReveal";
-import { useLottie } from "../../scene_4/components/LottieLoader";
+import { Scene8Wrapper } from "../components/Scene8Wrapper";
+import { DocumentReveal } from "../components/DocumentReveal";
+import { useLottie } from "../components/LottieLoader";
 import {
     SCENE8_LINE4_DUR,
     IMG_DASHBOARD,
@@ -68,7 +68,7 @@ export const Scene8Line4: React.FC = () => {
     const contentOpacity = interpolate(exitProgress, [0, 1], [1, 0]);
 
     return (
-        <Scene4Wrapper duration={SCENE8_LINE4_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
+        <Scene8Wrapper duration={SCENE8_LINE4_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
             {/* Dark backdrop */}
             <AbsoluteFill
                 style={{
@@ -229,7 +229,6 @@ export const Scene8Line4: React.FC = () => {
                 >
                     <DocumentReveal
                         text="Ekola mu nsawo yo n’ebyo by’oyagala."
-                        mode="word"
                         delay={145}
                         color={TEXT_WHITE}
                         className="text-4xl text-center"
@@ -238,6 +237,6 @@ export const Scene8Line4: React.FC = () => {
                     />
                 </div>
             </div>
-        </Scene4Wrapper>
+        </Scene8Wrapper>
     );
 };

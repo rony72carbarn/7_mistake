@@ -2,6 +2,7 @@ import requests
 import json
 import base64
 import re
+import os
 
 # -------------------------------------------------------------------------
 # CONFIGURATION
@@ -9,16 +10,32 @@ import re
 API_KEY = "sk_58b986671e9c03f7f8212fffc0becf1c211aedc93fddb5b6"
 VOICE_ID = "SC7dE9527sxeZsMWVg9Z"
 
-OUTPUT_FILENAME = "script_audio.mp3"
-METADATA_FILENAME = "script_metadata.json"
+SCENE_NUMBER = 4  # 🔥 change this per scene
+
+OUTPUT_AUDIO_NAME = "script_audio.mp3"
+OUTPUT_METADATA_NAME = "script_metadata.json"
 
 TEXT_TO_SPEAK = (
-    """Cholakwika chachinayi: Kudumpha kuwunika zikalata—ndikukagwidwa potulutsa galimoto (clearing).
-Ku Malawi, zikalata zanu ndizofunika chimodzimodzi ndi galimotoyo. Mukufunika zikalata zenizeni (originals) zokonzeka ku Customs ndi kulembetsa—kuphatikizapo invoice yanu, Bill of Lading, ndi mapepala ofunikira potulutsa galimoto. Ndi Carbarn, mutha kutsata ndi kutsitsa zikalata zofunika kudzera pa Dashboard yanu, ndipo mudzalandira zomwe mukufunikira, kuphatikizapo invoice ndi mapepala otumizira—choncho palibe chomwe chidzasowe "pambuyo pake".
+    """
+    মিস্টেক নাম্বার থ্রি: হিডেন ওয়্যার অ্যান্ড টিয়ার ইগনোর করা।" "গাড়ি অকশন গ্রেড ৪.৫ হলেও টায়ার আর ব্রেক প্যাডের অবস্থা খারাপ থাকতে পারে। আর এগুলো ঢাকায় এনে রিপ্লেস করতে গেলে পকেট থেকে হাজার হাজার টাকা হাওয়া! কারবার্নের ডিটেইলড ছবি আর রিপোর্ট দেখে আপনি আগেই বুঝতে পারবেন কোন পার্টসগুলোর কী অবস্থা। সো, পেমেন্ট করার আগেই আপনি একটা স্মার্ট ডিসিশন নিতে পারবেন, এক্সট্রা খরচের কোনো সারপ্রাইজ থাকবে না।
 """
 )
 
 MAX_SENTENCE_DURATION = 8.0  # seconds
+
+# -------------------------------------------------------------------------
+# SCENE ASSETS DIRECTORY
+# -------------------------------------------------------------------------
+def get_scene_assets_directory(scene_number):
+    folder_name = f"scene_{scene_number}_assets"
+
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+        print(f"Created folder: {folder_name}")
+    else:
+        print(f"Using existing folder: {folder_name}")
+
+    return folder_name
 
 # -------------------------------------------------------------------------
 # API CALL
@@ -33,7 +50,7 @@ def generate_audio_with_timestamps(text, voice_id, api_key):
 
     payload = {
         "text": text,
-        "model_id": "eleven_multilingual_v2",
+        "model_id": "eleven_v3",
         "voice_settings": {
             "stability": 0.5,
             "similarity_boost": 0.75
@@ -60,18 +77,13 @@ def calculate_sentence_timestamps(alignment_data):
     current_text = ""
     sentence_start = None
 
-    sentence_end_pattern = re.compile(r"[.!?]")
-
     for i, char in enumerate(characters):
         if sentence_start is None:
             sentence_start = start_times[i]
 
         current_text += char
 
-        is_last_char = i == len(characters) - 1
-        is_sentence_end = sentence_end_pattern.match(char)
-
-        if is_sentence_end or is_last_char:
+        if char in ".!?" or i == len(characters) - 1:
             sentence_end = end_times[i]
 
             sentences.append({
@@ -90,11 +102,11 @@ def calculate_sentence_timestamps(alignment_data):
 # SPLIT LONG SENTENCES
 # -------------------------------------------------------------------------
 def split_long_sentences(sentences, max_duration):
-    final_sentences = []
+    final = []
 
     for s in sentences:
-        if s["duration_seconds"] < max_duration:
-            final_sentences.append(s)
+        if s["duration_seconds"] <= max_duration:
+            final.append(s)
             continue
 
         text = s["sentence"]
@@ -102,41 +114,35 @@ def split_long_sentences(sentences, max_duration):
         end = s["end_time"]
         mid_time = start + (end - start) / 2
 
-        mid_index = len(text) // 2
+        split_index = text.rfind(" ", 0, len(text)//2)
+        if split_index == -1:
+            split_index = len(text)//2
 
-        # Avoid cutting words
-        left_space = text.rfind(" ", 0, mid_index)
-        right_space = text.find(" ", mid_index)
-
-        if left_space == -1 and right_space == -1:
-            split_index = mid_index
-        else:
-            candidates = [i for i in [left_space, right_space] if i != -1]
-            split_index = min(candidates, key=lambda x: abs(x - mid_index))
-
-        first_text = text[:split_index].strip()
-        second_text = text[split_index:].strip()
-
-        final_sentences.append({
-            "sentence": first_text,
+        final.append({
+            "sentence": text[:split_index].strip(),
             "start_time": start,
             "end_time": mid_time,
             "duration_seconds": round(mid_time - start, 3)
         })
 
-        final_sentences.append({
-            "sentence": second_text,
+        final.append({
+            "sentence": text[split_index:].strip(),
             "start_time": mid_time,
             "end_time": end,
             "duration_seconds": round(end - mid_time, 3)
         })
 
-    return final_sentences
+    return final
 
 # -------------------------------------------------------------------------
 # MAIN
 # -------------------------------------------------------------------------
 def main():
+    assets_dir = get_scene_assets_directory(SCENE_NUMBER)
+
+    audio_path = os.path.join(assets_dir, OUTPUT_AUDIO_NAME)
+    metadata_path = os.path.join(assets_dir, OUTPUT_METADATA_NAME)
+
     response = generate_audio_with_timestamps(
         TEXT_TO_SPEAK,
         VOICE_ID,
@@ -145,27 +151,27 @@ def main():
 
     # Save audio
     audio_bytes = base64.b64decode(response["audio_base64"])
-    with open(OUTPUT_FILENAME, "wb") as f:
+    with open(audio_path, "wb") as f:
         f.write(audio_bytes)
 
-    print(f"Audio saved: {OUTPUT_FILENAME}")
+    print(f"Audio saved → {audio_path}")
 
-    # Process timestamps
     alignment = response["alignment"]
     sentences = calculate_sentence_timestamps(alignment)
     sentences = split_long_sentences(sentences, MAX_SENTENCE_DURATION)
 
     metadata = {
+        "scene": SCENE_NUMBER,
         "total_duration": alignment["character_end_times_seconds"][-1],
         "sentences": sentences
     }
 
-    with open(METADATA_FILENAME, "w", encoding="utf-8") as f:
+    with open(metadata_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4, ensure_ascii=False)
 
-    print(f"Metadata saved: {METADATA_FILENAME}")
+    print(f"Metadata saved → {metadata_path}")
 
-    print("\n--- FINAL SENTENCE TIMINGS ---")
+    print("\n--- SENTENCE TIMINGS ---")
     for s in sentences:
         print(f"[{s['duration_seconds']}s] {s['sentence']}")
 

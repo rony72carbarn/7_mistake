@@ -1,0 +1,93 @@
+[
+  {
+    "scene": 4,
+    "asset_id": "asset_00",
+    "filename": "asset_00.png",
+    "filepath": "scene_4_assets\\asset_00.png",
+    "contextual_rationale": "Here's the breakdown of your script into visual beats with corresponding infographic assets:\n\n This image represents the concept of \"hidden wear and tear.\" A car icon with a question mark or a hidden element within it signifies something unseen.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_01",
+    "filename": "asset_01.png",
+    "filepath": "scene_4_assets\\asset_01.png",
+    "contextual_rationale": "This image focuses on the car's auction grade, showing a car icon with a \"4.5\" rating, but also highlighting specific parts like tires and brake pads with a warning or \"bad condition\" indicator.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_02",
+    "filename": "asset_02.png",
+    "filepath": "scene_4_assets\\asset_02.png",
+    "contextual_rationale": "This visual represents the cost of replacement. A hand reaching for money or a wallet, with a \"minus\" or \"decreasing\" money symbol, indicates financial loss.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_03",
+    "filename": "asset_03.png",
+    "filepath": "scene_4_assets\\asset_03.png",
+    "contextual_rationale": "This image illustrates the \"detailed pictures and reports\" from Carbarn. A magnifying glass over a car or document icon, with an \"eye\" symbol, suggests thorough inspection.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_04",
+    "filename": "asset_04.png",
+    "filepath": "scene_4_assets\\asset_04.png",
+    "contextual_rationale": "This visual shows the user gaining knowledge about the car parts. Icons of car parts (tire, brake) with a \"check mark\" or \"information\" symbol indicate understanding their condition.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_05",
+    "filename": "asset_05.png",
+    "filepath": "scene_4_assets\\asset_05.png",
+    "contextual_rationale": "This image represents making a \"smart decision\" before payment. A brain icon or a lightbulb over a \"payment\" or \"money\" icon signifies intelligent choice.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 4,
+    "asset_id": "asset_06",
+    "filename": "asset_06.png",
+    "filepath": "scene_4_assets\\asset_06.png",
+    "contextual_rationale": "This final image shows the absence of \"extra expenses\" or \"surprises.\" A car, a wallet, and a \"no surprise\" or \"zero extra cost\" symbol (e.g., a crossed-out question mark or a shield) convey peace of mind.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  }
+]

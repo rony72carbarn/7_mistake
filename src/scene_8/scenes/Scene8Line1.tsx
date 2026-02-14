@@ -9,9 +9,9 @@ import {
     Easing,
 } from "remotion";
 import { Lottie } from "@remotion/lottie";
-import { Scene4Wrapper } from "../../scene_4/components/Scene4Wrapper";
-import { DocumentReveal } from "../../scene_4/components/DocumentReveal";
-import { useLottie } from "../../scene_4/components/LottieLoader";
+import { Scene8Wrapper } from "../components/Scene8Wrapper";
+import { DocumentReveal } from "../components/DocumentReveal";
+import { useLottie } from "../components/LottieLoader";
 import {
     SCENE8_LINE1_DUR,
     IMG_DASHBOARD,
@@ -68,7 +68,7 @@ export const Scene8Line1: React.FC = () => {
     const contentScale = interpolate(exitProgress, [0, 1], [1, 0.95]);
 
     return (
-        <Scene4Wrapper duration={SCENE8_LINE1_DUR} bg="transparent" fadeOut={false}>
+        <Scene8Wrapper duration={SCENE8_LINE1_DUR} bg="transparent" fadeOut={false}>
             {/* Dark premium gradient backdrop */}
             <AbsoluteFill
                 style={{
@@ -191,7 +191,6 @@ export const Scene8Line1: React.FC = () => {
 
                         <DocumentReveal
                             text="Okulaba mmotoka eziriyo kati,"
-                            mode="word"
                             delay={15}
                             color={TEXT_WHITE}
                             className="text-5xl"
@@ -229,6 +228,6 @@ export const Scene8Line1: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </Scene4Wrapper>
+        </Scene8Wrapper>
     );
 };

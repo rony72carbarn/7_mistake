@@ -1,105 +1,55 @@
 import React from "react";
-import { Img, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { Lottie } from "@remotion/lottie";
+import { Img, spring, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
 import { Scene4Wrapper } from "../components/Scene4Wrapper";
-import { MultiLineReveal } from "../components/DocumentReveal";
-import { useLottie } from "../components/LottieLoader";
+import { DocumentReveal } from "../components/DocumentReveal";
 import {
-  SCENE4_LINE2_DUR,
-  IMG_DOCS_MATTER,
-  LOTTIE_SHIELD,
-  TECH_BLUE,
-  CURRENT_REGION,
-  IMG_BOTS_MAP,
+    SCENE4_LINE2_DUR,
+    S4_IMG_01,
+    WARNING_ORANGE,
 } from "../constants";
 
-/**
- * Scene 4 - Line 2: Documents Matter as Much as Car
- * Progressive multi-line storytelling about document importance
- */
-export const Scene4Line2: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const lottieData = useLottie(LOTTIE_SHIELD);
+export const Scene4Line2: React.FC<{ fadeIn?: boolean; fadeOut?: boolean }> = ({ fadeIn, fadeOut }) => {
+    const frame = useCurrentFrame();
+    const { fps } = useVideoConfig();
 
-  // Image scale in animation
-  const imgScale = spring({
-    frame: frame - 0,
-    fps,
-    config: { damping: 15, stiffness: 180 },
-  });
+    const spr = spring({ frame, fps, config: { damping: 12 } });
 
-  const exitFrame = SCENE4_LINE2_DUR - 12;
-  const exitProgress = interpolate(frame, [exitFrame, SCENE4_LINE2_DUR], [0, 1], { extrapolateLeft: "clamp" });
-  const contentOpacity = interpolate(exitProgress, [0, 1], [1, 0]);
-  const elementExitY = interpolate(exitProgress, [0, 1], [0, 150]);
-
-  return (
-    <Scene4Wrapper
-      duration={SCENE4_LINE2_DUR}
-      bgImage={CURRENT_REGION === 'BOTSWANA' ? IMG_BOTS_MAP : IMG_DOCS_MATTER}
-      bgOpacity={0.12}
-      fadeOut={false}
-    >
-      <div
-        className="w-full h-full flex flex-col items-center justify-center px-8 py-8 gap-6"
-        style={{ opacity: contentOpacity, transform: `translateY(${elementExitY}px)` }}
-      >
-        {/* Center: Main image */}
-        <div
-          className="w-2/3 max-w-3xl relative overflow-hidden"
-          style={{
-            opacity: imgScale,
-            transform: `scale(${interpolate(imgScale, [0, 1], [0.85, 1])})`,
-          }}
-        >
-          <Img
-            src={IMG_DOCS_MATTER}
-            className="w-full h-auto rounded-2xl shadow-2xl object-contain"
-            style={{ maxHeight: "400px" }}
-          />
-          {/* Lottie shield overlay */}
-          {lottieData && (
-            <div
-              className="absolute top-2 right-2"
-              style={{
-                width: 100,
-                height: 100,
-                opacity: interpolate(frame, [55, 75], [0, 1], {
-                  extrapolateRight: "clamp",
-                }),
-              }}
-            >
-              <Lottie animationData={lottieData} style={{ width: 100, height: 100 }} />
-            </div>
-          )}
-        </div>
-
-        {/* Multi-line progressive text reveal */}
-        <div className="w-full max-w-4xl overflow-hidden">
-          <MultiLineReveal
-            lines={CURRENT_REGION === 'BOTSWANA' ? [
-              "dipampiri tsa gago",
-              "di botlhokwa fela jaaka koloi.",
-            ] : CURRENT_REGION === 'ZIMBABWE' ? [
-              "MuZimbabwe, magwaro ako",
-              "akakosha zvakafanana nemotokari.",
-            ] : CURRENT_REGION === 'UGANDA' ? [
-              "Wano e Uganda, ebiwandiiko",
-              "bikulu nnyo okwenkanankana",
-              "n’emmotoka yennyini.",
-            ] : [
-              "your documents matter",
-              "as much as the car.",
-            ]}
-            lineDelay={25}
-            mode="word"
-            className="text-5xl text-center"
-            highlightWords={CURRENT_REGION === 'BOTSWANA' ? ["dipampiri", "botlhokwa", "koloi"] : CURRENT_REGION === 'ZIMBABWE' ? ["Zimbabwe", "magwaro", "motokari"] : CURRENT_REGION === 'UGANDA' ? ["ebiwandiiko", "n’emmotoka"] : ["documents", "matter", "car"]}
-            highlightColor={TECH_BLUE}
-          />
-        </div>
-      </div>
-    </Scene4Wrapper>
-  );
+    return (
+        <Scene4Wrapper
+            duration={SCENE4_LINE2_DUR}
+            layout="split-left"
+            bgImage={S4_IMG_01}
+            fadeIn={fadeIn}
+            fadeOut={fadeOut}
+            leftContent={
+                <div className="relative w-full h-full p-8">
+                    <div
+                        className="w-full h-full rounded-[4rem] overflow-hidden border-4 border-white/20 shadow-2xl relative"
+                        style={{ transform: `scale(${interpolate(spr, [0, 1], [0.8, 1])}) rotate(1deg)` }}
+                    >
+                        <Img src={S4_IMG_01} className="w-full h-full object-cover" />
+                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent" />
+                        <div className="absolute bottom-12 left-12 right-12">
+                            <span className="text-orange-400 text-3xl font-black italic block mb-2 tracking-tighter uppercase">Auction Grade 4.5</span>
+                            <span className="text-white text-5xl font-black leading-none">Not Always Perfect</span>
+                        </div>
+                    </div>
+                </div>
+            }
+            rightContent={
+                <div className="space-y-12 px-12" style={{ opacity: spr, transform: `translateX(${interpolate(spr, [0, 1], [100, 0])}px)` }}>
+                    <DocumentReveal
+                        text="গাড়ি অকশন গ্রেড ৪.৫ হলেও টায়ার আর ব্রেক প্যাডের অবস্থা খারাপ থাকতে পারে।"
+                        className="text-7xl leading-tight"
+                        highlightWords={["টায়ার", "ব্রেক", "প্যাডের"]}
+                        highlightColor={WARNING_ORANGE}
+                    />
+                    <div className="h-1 w-32 bg-orange-500 rounded-full" />
+                    <p className="text-white/60 text-2xl font-medium tracking-wide leading-relaxed">
+                        Hidden wear and tear can hide behind a high auction grade.
+                    </p>
+                </div>
+            }
+        />
+    );
 };

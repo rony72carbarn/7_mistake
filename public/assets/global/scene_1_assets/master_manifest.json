@@ -1,0 +1,80 @@
+[
+  {
+    "scene": 1,
+    "asset_id": "asset_00",
+    "filename": "asset_00.png",
+    "filepath": "scene_1_assets\\asset_00.png",
+    "contextual_rationale": "Here's the breakdown of the video script into visual beats, with a modern, flat-style infographic asset for each:\n\nThe first beat introduces the topic of importing reconditioned cars from Japan. A visual of a car with a Japanese flag element would be suitable.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 1,
+    "asset_id": "asset_01",
+    "filename": "asset_01.png",
+    "filepath": "scene_1_assets\\asset_01.png",
+    "contextual_rationale": "This visual represents the common misconception that problems arise after the car reaches the port. A car at a port with a \"no entry\" or \"stop\" sign could convey this.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 1,
+    "asset_id": "asset_02",
+    "filename": "asset_02.png",
+    "filepath": "scene_1_assets\\asset_02.png",
+    "contextual_rationale": "This beat highlights that the real problems begin *before* buying the car. A visual showing a car being purchased, but with a question mark or warning sign, would work.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 1,
+    "asset_id": "asset_03",
+    "filename": "asset_03.png",
+    "filepath": "scene_1_assets\\asset_03.png",
+    "contextual_rationale": "This visual represents skipping important checks. A checklist with some items unchecked or crossed out would be effective.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 1,
+    "asset_id": "asset_04",
+    "filename": "asset_04.png",
+    "filepath": "scene_1_assets\\asset_04.png",
+    "contextual_rationale": "This beat introduces the \"top 7 mistakes.\" A visual with a prominent number 7 and a warning or mistake icon would be clear.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 1,
+    "asset_id": "asset_05",
+    "filename": "asset_05.png",
+    "filepath": "scene_1_assets\\asset_05.png",
+    "contextual_rationale": "This visual introduces Carbarn as a solution. A shield or protective barrier with a car and the Carbarn logo (represented by a simple icon) would convey this.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  }
+]

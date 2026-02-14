@@ -1,0 +1,48 @@
+{
+    "scene": 3,
+    "total_duration": 35.069,
+    "sentences": [
+        {
+            "sentence": "\"মিস্টেক নাম্বার টু: শুধু বাইরের লুকস দেখে ফিদা হয়ে যাওয়া!",
+            "start_time": 0.0,
+            "end_time": 5.239,
+            "duration_seconds": 5.239
+        },
+        {
+            "sentence": "\" \"গাড়ির বডি চকচক করলেই কিন্তু গাড়ি পারফেক্ট না। কারবার্নে আপনি কমিট করার আগেই দুইটা সলিড রিপোর্ট",
+            "start_time": 5.239,
+            "end_time": 14.692,
+            "duration_seconds": 9.453
+        },
+        {
+            "sentence": "পাবেন: অরিজিনাল জাপানিজ অকশন শিট আর কারবার্নের স্পেশাল ইন্সপেকশন রিপোর্ট। আন্ডারক্যারেজে রাস্ট (মরিচা) আছে?",
+            "start_time": 14.692,
+            "end_time": 24.145,
+            "duration_seconds": 9.453
+        },
+        {
+            "sentence": "ওয়ার্নিং লাইট জ্বলছে?",
+            "start_time": 24.145,
+            "end_time": 25.425,
+            "duration_seconds": 1.28
+        },
+        {
+            "sentence": "ইন্টেরিয়রে স্ক্র্যাচ?",
+            "start_time": 25.425,
+            "end_time": 28.223,
+            "duration_seconds": 2.798
+        },
+        {
+            "sentence": "সবকিছু হাই-রেজোলিউশন ছবিসহ আপনার সামনে থাকবে। দিস ইজ রিয়েল ট্রান্সপারেন্সি!",
+            "start_time": 28.223,
+            "end_time": 34.963,
+            "duration_seconds": 6.74
+        },
+        {
+            "sentence": "\"",
+            "start_time": 34.963,
+            "end_time": 35.069,
+            "duration_seconds": 0.106
+        }
+    ]
+}

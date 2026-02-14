@@ -6,7 +6,7 @@ import {
     useCurrentFrame,
     useVideoConfig,
 } from "remotion";
-import { Scene4Wrapper } from "../../scene_4/components/Scene4Wrapper";
+import { Scene8Wrapper } from "../components/Scene8Wrapper";
 import {
     SCENE8_LINE2_DUR,
     ACCENT_CYAN,
@@ -41,7 +41,7 @@ export const Scene8Line2: React.FC = () => {
     const contentOpacity = interpolate(exitProgress, [0, 1], [1, 0]);
 
     return (
-        <Scene4Wrapper duration={SCENE8_LINE2_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
+        <Scene8Wrapper duration={SCENE8_LINE2_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
             {/* Dark backdrop continuation */}
             <AbsoluteFill
                 style={{
@@ -91,6 +91,6 @@ export const Scene8Line2: React.FC = () => {
                     </span>
                 </div>
             </div>
-        </Scene4Wrapper>
+        </Scene8Wrapper>
     );
 };

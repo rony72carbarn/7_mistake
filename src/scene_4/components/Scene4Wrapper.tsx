@@ -1,126 +1,127 @@
 import React from "react";
-import { AbsoluteFill, Img, interpolate, useCurrentFrame } from "remotion";
-import { GRID_COLOR, TECH_BLUE } from "../constants";
+import { AbsoluteFill, Img, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { BG_DARK, TECH_BLUE, GRID_COLOR } from "../constants";
 import { FloatingParticles } from "./FloatingParticles";
 
-/**
- * Premium Grid Background Animation
- * Animated grid with parallax motion and glowing orbs
- */
 const PremiumGrid: React.FC = () => {
-  const frame = useCurrentFrame();
-  const offset = interpolate(frame, [0, 1600], [0, 250], { extrapolateRight: "extend" });
-
-  return (
-    <AbsoluteFill className="pointer-events-none overflow-hidden">
-      {/* Animated grid pattern */}
-      <div
-        className="absolute inset-[-200px]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, ${GRID_COLOR} 1px, transparent 1px),
-            linear-gradient(to bottom, ${GRID_COLOR} 1px, transparent 1px)
-          `,
-          backgroundSize: "60px 60px",
-          transform: `translate(${-offset % 60}px, ${-offset % 60}px) rotate(-1deg)`,
-          opacity: 0.8,
-        }}
-      />
-      {/* Glowing orbs with wave motion */}
-      <div className="absolute inset-0 flex flex-wrap justify-around opacity-30">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="w-[30vw] h-[30vw] rounded-full blur-[150px]"
-            style={{
-              backgroundColor: TECH_BLUE,
-              transform: `translate(${Math.sin(frame / 200 + i) * 80}px, ${Math.cos(frame / 250 + i) * 80}px)`,
-            }}
-          />
-        ))}
-      </div>
-    </AbsoluteFill>
-  );
-};
-
-/**
- * Scene 4 Wrapper Component
- * Provides consistent scene framing with fade transitions and animated background
- *
- * @param children - Scene content to render
- * @param duration - Total duration of the scene in frames
- * @param bg - Background color (default: #E9F3FF)
- * @param bgImage - Optional background image with low opacity
- * @param bgOpacity - Opacity of background image (default: 0.15)
- */
-export const Scene4Wrapper: React.FC<{
-  children: React.ReactNode;
-  duration: number;
-  bg?: string;
-  bgImage?: string;
-  bgOpacity?: number;
-  fadeIn?: boolean;
-  fadeOut?: boolean;
-}> = ({
-  children,
-  duration,
-  bg = "#E9F3FF",
-  bgImage,
-  bgOpacity = 0.15,
-  fadeIn = true,
-  fadeOut = true,
-}) => {
     const frame = useCurrentFrame();
-
-    // Controlled fade in/out to allow seamless scene connection
-    // Controlled fade in/out to allow seamless scene connection
-    // Calculate safe fade duration to avoid overlapping input ranges
-    // Must be strictly less than duration / 2 for strict monotonicity
-    const maxFade = Math.floor((duration - 1) / 2);
-    const fadeTime = Math.min(12, maxFade);
-
-    // Only interpolate if we have enough frames (duration >= 3)
-    const shouldInterpolate = duration >= 3;
-
-    const opacity = shouldInterpolate
-      ? interpolate(
-        frame,
-        [0, fadeTime, duration - fadeTime, duration],
-        [fadeIn ? 0 : 1, 1, 1, fadeOut ? 0 : 1],
-        {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-        }
-      )
-      : 1;
-
-    // Background image gentle zoom/pan animation
-    const bgScale = interpolate(frame, [0, duration], [1, 1.1], {
-      extrapolateRight: "clamp",
-    });
+    const offset = interpolate(frame, [0, 1600], [0, 250], { extrapolateRight: "extend" });
 
     return (
-      <AbsoluteFill style={{ backgroundColor: bg, opacity }}>
-        {/* Optional background image with low opacity */}
-        {bgImage && (
-          <AbsoluteFill className="pointer-events-none overflow-hidden">
-            <Img
-              src={bgImage}
-              className="w-full h-full object-cover"
-              style={{
-                opacity: bgOpacity,
-                transform: `scale(${bgScale})`,
-                filter: "blur(2px)",
-              }}
+        <AbsoluteFill className="pointer-events-none overflow-hidden">
+            <div
+                className="absolute inset-[-200px]"
+                style={{
+                    backgroundImage: `
+            linear-gradient(to right, ${GRID_COLOR || "rgba(0, 82, 255, 0.12)"} 2px, transparent 2px),
+            linear-gradient(to bottom, ${GRID_COLOR || "rgba(0, 82, 255, 0.12)"} 2px, transparent 2px)
+          `,
+                    backgroundSize: "80px 80px",
+                    transform: `translate(${-offset % 80}px, ${-offset % 80}px) rotate(-2deg)`,
+                    opacity: 0.6,
+                }}
             />
-          </AbsoluteFill>
-        )}
-
-        <PremiumGrid />
-        <FloatingParticles />
-        <div className="relative z-10 w-full h-full flex items-center justify-center px-8">
-          {children}
-        </div>
-      </AbsoluteFill>
+            <div className="absolute inset-0 flex flex-wrap justify-around opacity-40">
+                {[...Array(6)].map((_, i) => (
+                    <div
+                        key={i}
+                        className="w-[40vw] h-[40vw] rounded-full blur-[180px]"
+                        style={{
+                            backgroundColor: i % 2 === 0 ? TECH_BLUE : "#4F46E5",
+                            transform: `translate(${Math.sin(frame / 150 + i) * 120}px, ${Math.cos(frame / 180 + i) * 120}px)`,
+                            opacity: 0.4,
+                        }}
+                    />
+                ))}
+            </div>
+        </AbsoluteFill>
     );
-  };
+};
+
+export const Scene4Wrapper: React.FC<{
+    children?: React.ReactNode;
+    duration: number;
+    bgImage?: string;
+    bgOpacity?: number;
+    layout?: "full" | "split-left" | "split-right";
+    leftContent?: React.ReactNode;
+    rightContent?: React.ReactNode;
+    fadeIn?: boolean;
+    fadeOut?: boolean;
+}> = ({
+    children,
+    duration,
+    bgImage,
+    bgOpacity = 0.5,
+    layout = "full",
+    leftContent,
+    rightContent,
+    fadeIn = true,
+    fadeOut = true,
+}) => {
+        const frame = useCurrentFrame();
+        const { fps } = useVideoConfig();
+        const opacity = interpolate(
+            frame,
+            [0, 15, duration - 15, duration],
+            [fadeIn ? 0 : 1, 1, 1, fadeOut ? 0 : 1],
+            { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+        );
+
+        const layoutSpring = spring({ frame, fps, config: { damping: 20 } });
+        const bgScale = interpolate(frame, [0, duration], [1, 1.15]);
+
+        return (
+            <AbsoluteFill style={{ backgroundColor: BG_DARK, opacity }}>
+                {/* Background Image with Cinematic Effects */}
+                {bgImage && (
+                    <AbsoluteFill className="pointer-events-none">
+                        <Img
+                            src={bgImage}
+                            className="w-full h-full object-cover"
+                            style={{
+                                opacity: bgOpacity,
+                                transform: `scale(${bgScale})`,
+                                filter: "blur(2px) brightness(0.7)",
+                            }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/40 to-slate-950/90" />
+                    </AbsoluteFill>
+                )}
+
+                <PremiumGrid />
+                <FloatingParticles />
+
+                {/* Cinematic Vignette */}
+                <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_300px_rgba(0,0,0,0.8)] z-30" />
+
+                {/* Dynamic Content Layout */}
+                {layout === "full" ? (
+                    <AbsoluteFill className="flex items-center justify-center px-16 z-20">
+                        {children}
+                    </AbsoluteFill>
+                ) : (
+                    <AbsoluteFill className="flex flex-row z-20">
+                        <div
+                            className="flex-1 flex items-center justify-center p-12 overflow-hidden"
+                            style={{
+                                transform: `translateX(${interpolate(layoutSpring, [0, 1], [layout === "split-left" ? -50 : 50, 0])}px)`,
+                                opacity: layoutSpring
+                            }}
+                        >
+                            {layout === "split-left" ? leftContent : rightContent}
+                        </div>
+                        <div
+                            className="flex-1 flex items-center justify-center p-12 overflow-hidden bg-slate-950/40 backdrop-blur-md border-l border-white/10"
+                            style={{
+                                transform: `translateX(${interpolate(layoutSpring, [0, 1], [layout === "split-left" ? 50 : -50, 0])}px)`,
+                                opacity: layoutSpring
+                            }}
+                        >
+                            {layout === "split-left" ? rightContent : leftContent}
+                        </div>
+                    </AbsoluteFill>
+                )}
+            </AbsoluteFill>
+        );
+    };

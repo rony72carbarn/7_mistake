@@ -1,0 +1,93 @@
+[
+  {
+    "scene": 3,
+    "asset_id": "asset_00",
+    "filename": "asset_00.png",
+    "filepath": "scene_3_assets\\asset_00.png",
+    "contextual_rationale": "Here's the visual breakdown of your script, with each beat represented by a modern, flat-style infographic asset:\n\n This image represents the initial mistake of being swayed by superficial appearances. A car with a shiny exterior but a hidden \"X\" or question mark indicating underlying issues.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_01",
+    "filename": "asset_01.png",
+    "filepath": "scene_3_assets\\asset_01.png",
+    "contextual_rationale": "This image focuses on the \"shiny body\" aspect, showing a car being polished or sparkling, to visually represent the idea that a car's appearance can be deceiving.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_02",
+    "filename": "asset_02.png",
+    "filepath": "scene_3_assets\\asset_02.png",
+    "contextual_rationale": "This visual represents the two \"solid reports\" mentioned: the Original Japanese Auction Sheet and the Carbarne Special Inspection Report. Two distinct document icons with checkmarks or a \"verified\" symbol.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_03",
+    "filename": "asset_03.png",
+    "filepath": "scene_3_assets\\asset_03.png",
+    "contextual_rationale": "This image specifically illustrates \"rust on the undercarriage.\" A car's underside with visible rust spots or a rust icon.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_04",
+    "filename": "asset_04.png",
+    "filepath": "scene_3_assets\\asset_04.png",
+    "contextual_rationale": "This visual represents a \"warning light glowing.\" A car dashboard with a prominent warning light illuminated.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_05",
+    "filename": "asset_05.png",
+    "filepath": "scene_3_assets\\asset_05.png",
+    "contextual_rationale": "This image depicts \"scratches in the interior.\" A car interior with visible scratch marks on a surface like a dashboard or door panel.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 3,
+    "asset_id": "asset_06",
+    "filename": "asset_06.png",
+    "filepath": "scene_3_assets\\asset_06.png",
+    "contextual_rationale": "This visual represents \"everything with high-resolution pictures.\" A series of photo icons or a camera icon pointing to detailed images, indicating visual evidence.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  }
+]

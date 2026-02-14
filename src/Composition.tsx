@@ -13,9 +13,6 @@ import {
 import { Lottie, LottieAnimationData } from "@remotion/lottie";
 import React, { useEffect, useState } from "react";
 import { cancelRender, continueRender, delayRender } from "remotion";
-import { Scene4Composition } from "./scene_4";
-import { Scene5Composition } from "./scene_5";
-import { Scene6Composition } from "./scene_6";
 import { Scene8Composition } from "./scene_8";
 
 // Colors
@@ -506,71 +503,6 @@ export const MyComposition: React.FC = () => {
           <Line9Scene />
         </Series.Sequence>
       </Series>
-    </AbsoluteFill>
-  );
-};
-
-// Scene 4 Composition - Mistake #4 (South Sudan - Documents)
-// TODO: Generate voice-over with ElevenLabs using this script:
-// "For South Sudan, your documents matter as much as the car. You need the right
-// originals ready for customs and registration. With Carbarn, you can track and
-// download key documents through your dashboard, and you'll receive what you need,
-// including your invoice and shipping paperwork — so nothing is 'missing later'."
-//
-// After generating Scene 4 audio, change this to: staticFile("audio_scene4_south_sudan.mp3")
-
-const AUDIO_SCENE4_ZAM = staticFile("audio_scene4_zambia.mp3");
-const AUDIO_SCENE4_BOT = staticFile("audio_scene4_botswana.mp3");
-const AUDIO_SCENE4_ZIM = staticFile("audio_scene4_zimbabwe.mp3");
-const AUDIO_SCENE4_UG = staticFile("audio_scene4_uganda.mp3");
-
-import { CURRENT_REGION } from "./scene_4/constants";
-
-export const Scene4: React.FC = () => {
-  const audioSrc =
-    CURRENT_REGION === 'BOTSWANA' ? AUDIO_SCENE4_BOT :
-      CURRENT_REGION === 'ZIMBABWE' ? AUDIO_SCENE4_ZIM :
-        CURRENT_REGION === 'UGANDA' ? AUDIO_SCENE4_UG :
-          AUDIO_SCENE4_ZAM;
-
-  return (
-    <AbsoluteFill className="bg-gradient-to-br from-[#F8FAFC] to-[#DDEAFB]">
-      <Audio src={audioSrc} />
-      <Scene4Composition />
-    </AbsoluteFill>
-  );
-};
-
-// Scene 5 Composition - Mistake #5 (South Sudan - Duties & Taxes)
-const AUDIO_SCENE5 = staticFile("assets/global/script_audio.mp3");
-
-export const Scene5: React.FC = () => {
-  return (
-    <AbsoluteFill className="bg-gradient-to-br from-[#F8FAFC] to-[#DDEAFB]">
-      <Audio src={AUDIO_SCENE5} />
-      <Scene5Composition />
-    </AbsoluteFill>
-  );
-};
-
-// Scene 6 Composition - Mistake #6 (South Sudan - Payments)
-export const Scene6: React.FC = () => {
-  return (
-    <AbsoluteFill className="bg-gradient-to-br from-[#F8FAFC] to-[#DDEAFB]">
-      <Audio src={AUDIO_SCENE5} />
-      <Scene6Composition />
-    </AbsoluteFill>
-  );
-};
-
-// Scene 7 Composition - Mistake #7 (South Sudan - Tracking)
-import { Scene7Composition } from "./scene_7";
-
-export const Scene7: React.FC = () => {
-  return (
-    <AbsoluteFill className="bg-gradient-to-br from-[#F8FAFC] to-[#DDEAFB]">
-      <Audio src={AUDIO_SCENE5} />
-      <Scene7Composition />
     </AbsoluteFill>
   );
 };

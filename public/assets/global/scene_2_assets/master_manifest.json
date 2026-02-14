@@ -1,0 +1,67 @@
+[
+  {
+    "scene": 2,
+    "asset_id": "asset_00",
+    "filename": "asset_00.png",
+    "filepath": "scene_2_assets\\asset_00.png",
+    "contextual_rationale": "Here's the infographic breakdown of your script:\n\n This image represents the first mistake: not knowing import rules. The \"X\" over a document or rulebook visually communicates a lack of understanding or incorrect information.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 2,
+    "asset_id": "asset_01",
+    "filename": "asset_01.png",
+    "filepath": "scene_2_assets\\asset_01.png",
+    "contextual_rationale": "This image directly illustrates the two strict rules mentioned: a car with a right-hand drive steering wheel and a timeline showing that cars older than 5 years are not allowed.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 2,
+    "asset_id": "asset_02",
+    "filename": "asset_02.png",
+    "filepath": "scene_2_assets\\asset_02.png",
+    "contextual_rationale": "This visual represents the Carbarn platform. The phone screen shows cars with \"100% legal\" tags, while a car with an \"X\" is shown outside, symbolizing that illegal cars are not even displayed.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 2,
+    "asset_id": "asset_03",
+    "filename": "asset_03.png",
+    "filepath": "scene_2_assets\\asset_03.png",
+    "contextual_rationale": "This image focuses on the \"no time waste\" aspect. A clock with an \"X\" over it, combined with a car moving past it, indicates efficiency and avoiding unnecessary delays.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  },
+  {
+    "scene": 2,
+    "asset_id": "asset_04",
+    "filename": "asset_04.png",
+    "filepath": "scene_2_assets\\asset_04.png",
+    "contextual_rationale": "This visual represents the filtering function. Icons for model, year, mileage, and auction grade are shown as filters, with a magnifying glass or eye icon indicating that these options are clearly visible and selectable.",
+    "style_tags": [
+      "2d",
+      "flat",
+      "infographic",
+      "no_text"
+    ]
+  }
+]

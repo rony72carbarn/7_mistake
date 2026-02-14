@@ -9,9 +9,9 @@ import {
     Easing,
 } from "remotion";
 import { Lottie } from "@remotion/lottie";
-import { Scene4Wrapper } from "../../scene_4/components/Scene4Wrapper";
-import { DocumentReveal } from "../../scene_4/components/DocumentReveal";
-import { useLottie } from "../../scene_4/components/LottieLoader";
+import { Scene8Wrapper } from "../components/Scene8Wrapper";
+import { DocumentReveal } from "../components/DocumentReveal";
+import { useLottie } from "../components/LottieLoader";
 import {
     SCENE8_LINE5_DUR,
     IMG_SHIPPED,
@@ -107,7 +107,7 @@ export const Scene8Line5: React.FC = () => {
     const journeyOpacity = interpolate(frame, [70, 100], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
     return (
-        <Scene4Wrapper duration={SCENE8_LINE5_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
+        <Scene8Wrapper duration={SCENE8_LINE5_DUR} bg="transparent" fadeIn={false} fadeOut={false}>
             {/* Deep navy gradient */}
             <AbsoluteFill
                 style={{
@@ -219,7 +219,6 @@ export const Scene8Line5: React.FC = () => {
                 >
                     <DocumentReveal
                         text="Tujja kukukulembera mutendera ku mutendera, okuva e Japan paka ku 'address' yo e Uganda."
-                        mode="word"
                         delay={75}
                         color={TEXT_WHITE}
                         className="text-4xl text-center"
@@ -380,6 +379,6 @@ export const Scene8Line5: React.FC = () => {
                     </span>
                 </div>
             </div>
-        </Scene4Wrapper>
+        </Scene8Wrapper>
     );
 };

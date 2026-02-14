@@ -1,47 +1,41 @@
 {
-    "total_duration": 40.542,
+    "total_duration": 25.774,
     "sentences": [
         {
-            "sentence": "Cholakwika chachinayi: Kudumpha kuwunika zikalata—ndikukagwidwa potulutsa galimoto (clearing).",
+            "sentence": "If you’re in Malawi and you’re planning to buy a Japanese used car, this video is for you.",
             "start_time": 0.0,
-            "end_time": 6.211,
-            "duration_seconds": 6.211
+            "end_time": 5.584,
+            "duration_seconds": 5.584
         },
         {
-            "sentence": "Ku Malawi, zikalata zanu ndizofunika chimodzimodzi ndi galimotoyo.",
-            "start_time": 6.211,
-            "end_time": 10.844,
-            "duration_seconds": 4.633
+            "sentence": "Because most problems don’t happen after the car arrives — they happen",
+            "start_time": 5.584,
+            "end_time": 10.344,
+            "duration_seconds": 4.76
         },
         {
-            "sentence": "Mukufunika zikalata zenizeni (originals) zokonzeka ku Customs ndi kulembetsa—kuphatikizapo",
-            "start_time": 10.844,
-            "end_time": 17.241,
-            "duration_seconds": 6.397
+            "sentence": "before you buy, when buyers skip the checks that actually matter.",
+            "start_time": 10.344,
+            "end_time": 15.104,
+            "duration_seconds": 4.76
         },
         {
-            "sentence": "invoice yanu, Bill of Lading, ndi mapepala ofunikira potulutsa galimoto.",
-            "start_time": 17.241,
-            "end_time": 23.638,
-            "duration_seconds": 6.397
+            "sentence": "So here are the Top 7 mistakes people make, and exactly how Carbarn Malawi",
+            "start_time": 15.104,
+            "end_time": 20.381,
+            "duration_seconds": 5.277
         },
         {
-            "sentence": "Ndi Carbarn, mutha kutsata ndi kutsitsa zikalata zofunika kudzera pa Dashboard yanu, ndipo mudzalandira zomwe",
-            "start_time": 23.638,
-            "end_time": 32.003,
-            "duration_seconds": 8.365
-        },
-        {
-            "sentence": "mukufunikira, kuphatikizapo invoice ndi mapepala otumizira—choncho palibe chomwe chidzasowe \"pambuyo pake\".",
-            "start_time": 32.003,
-            "end_time": 40.368,
-            "duration_seconds": 8.365
+            "sentence": "helps you avoid them with a simple, transparent step-by-step process.",
+            "start_time": 20.381,
+            "end_time": 25.658,
+            "duration_seconds": 5.277
         },
         {
             "sentence": "",
-            "start_time": 40.368,
-            "end_time": 40.542,
-            "duration_seconds": 0.174
+            "start_time": 25.658,
+            "end_time": 25.774,
+            "duration_seconds": 0.116
         }
     ]
 }
