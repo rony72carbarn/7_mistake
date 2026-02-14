@@ -5,11 +5,25 @@ on:
 
 jobs:
   render:
-    uses: rony72carbarn/Remotion-Matrix-Renderer/.github/workflows/render-video-matrix.yml@master
-    with:
-      num_of_workers: 3
-      remotion_composition_id: Scene4
-      remotion_entry_point: src/index.js
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Render video
+        run: npx remotion render Scene1 out.mp4 --entry=src/index.js
+
+      - name: Upload video
+        uses: actions/upload-artifact@v4
+        with:
+          name: video
+          path: out.mp4
