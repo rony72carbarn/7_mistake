@@ -8,5 +8,6 @@ jobs:
     uses: yuvraj108c/Remotion-Matrix-Renderer/.github/workflows/render-video-matrix.yml@master
     with:
       num_of_workers: 3
-      remotion_composition_id: Scene1
+      remotion_composition_id: Scene4
       remotion_entry_point: src/index.js
+
