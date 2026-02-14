@@ -20,10 +20,11 @@ jobs:
         run: npm install
 
       - name: Render video
-        run: npx remotion render Scene1 out.mp4 --entry=src/index.js
+        run: npx remotion render Scene4 out.mp4 --entry=src/index.js
 
       - name: Upload video
         uses: actions/upload-artifact@v4
         with:
           name: video
           path: out.mp4
+
